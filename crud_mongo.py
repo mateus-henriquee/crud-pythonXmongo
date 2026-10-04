@@ -25,8 +25,8 @@ for marcador in ("<db_password>", "<password>"):
 
 # ====== CONEXÃO ======
 client = MongoClient(MONGO_URI)
-db = client["meu_banco"]
-usuarios = db["usuarios"]
+db = client["meu_banco"] # <--- Nome do banco de dados do MongoDB.
+usuarios = db["usuarios"] # <--- Nome da coleção do MongoDB.
 usuarios.create_index("email", unique=True)
 
 
